@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/* RESET */
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+/* 헤더 영역 */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8.8rem;
+    padding: 0 3.2rem;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+#header > #logo > a {
+    display: block;
+    width: 10.4rem;
+    height: 8.8rem;
+    line-height: 8.8rem;
+}
+
+#header > #logo > a > .logo_default {
+    vertical-align: middle;
+}
+
+#header > #logo > a > .logo_scrolled {
+    display: none;
+}
+
+#header > #nav > ul {
+    display: flex;
+    align-items: center;
+}
+
+#header > #nav > ul > li {
+    margin-right: 4rem;
+}
+
+#header > #nav > ul > li:nth-of-type(5) {
+    position: relative;
+}
+
+#header > #nav > ul > li:nth-of-type(5)::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url('../images/icon-life-suffix.png') no-repeat;
+
+}
+
+#header > #nav > ul > li > a {
+    position: relative;
+    display: block;
+    font-family: "DINCond-Bold";
+    font-size: 2.2rem;
+    color: #fff;
+    letter-spacing: 0.4rem;
+}
+
+#header > #nav > ul > li > a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.4rem;
+    width: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    transition: 0.5s;
+    transform: translateX(-50%);
+}
+
+#header > #nav > ul > li:hover a::before {
+    width: 100%;
+}
+
+#header > .util > button {
+    width: 3rem;
+    height: 3rem;
+    background: url('../images/icon-gnb-search.png') no-repeat;
+}
+
+/* 헤더 스크롤 했을 때 */
+
+#header.scrolled {
+    height: 6.4rem !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#header.scrolled > #logo > a {
+    height: 6.4rem;
+    line-height: 6.4rem;
+}
+
+#header.scrolled > #logo > a > .logo_default {
+    display: none;
+}
+
+#header.scrolled > #logo > a > .logo_scrolled {
+    display: block;
+}
+
+#header.scrolled > #nav > ul > li:nth-of-type(5)::after {
+    background-position: -2rem;
+}
+
+#header.scrolled > #nav > ul > li > a {
+    color: #000;
+}
+
+#header.scrolled > #nav > ul > li > a:hover {
+    color: #158c76;
+}
+
+#header.scrolled > #nav > ul > li > a:hover::before {
+    background-color: #158c76;
+}
+
+#header.scrolled > .util > button {
+    background-position: -6rem;
+}
+
+/* 메인 섹션 영역 */
+
+#main_slide_wrap, #main_slide_wrap > .main_slide_frame  {
+    height: 100%;
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div > a > strong {
+    font-size: 5.6rem;
+    font-weight: lighter;
+    margin: 2.5rem 0;
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div > a > .more {
+    font-family: "DINCond-Bold";
+    font-size: 2.4rem;
+    letter-spacing: 0.3rem;
+    color: #fff;
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div > a > .more > .arrow {
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: -0.5rem 0 0 0.4rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div > a > .more > .arrow::after {
+    content: '';
+    display: block;
+    margin: calc(50% - 0.5rem) 0 0 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div.main_slide_prev {
+    background: url('../images/main_slide01.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#main_slide_wrap > .main_slide_frame > .swiper-wrapper > div.main_slide_next {
+    background: url('../images/main_slide02.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#main_slide_wrap > button {
+    width: 5rem;
+    height: 13.8rem;
+    margin-top: -6.9rem;
+    background: url('../images/main_slide_nav.png') no-repeat 0 1px;
+}
+
+#main_slide_wrap > button::after {
+    content: '';
+}
+
+#main_slide_wrap > button.swiper-button-prev {
+    left: 10rem;
+}
+
+#main_slide_wrap > button.swiper-button-next {
+    right: 10rem;
+    background-position: -114px 0;
+}
+
+#main_slide_wrap > .swiper-pagination {
+    bottom: 4.5rem !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff;
+    width: 1.2rem;
+    height: 1.2rem;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    width: 3.6rem;
+    border-radius: 0.6rem;
+    background-color: #fff;
+    opacity: 1;
+}
+
+/* 피코크 베스트 메뉴 */
+
+#peacock_best {
+    height: 100px;
+    margin-top: 7.3rem;
+    background-color: blanchedalmond;
+}

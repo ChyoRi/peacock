@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이마트 피코크</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    
+    <!-- 헤더 영역 -->
+
+    <header id="header">
+        <h1 id="logo">
+            <a href="#">
+                <img src="./images/logo-header.png" class="logo_default" alt="메인 로고" />
+                <img src="./images/logo-header-black.png" class="logo_scrolled" alt="스크롤 됐을시 메인 로고">
+            </a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="#n">DINING</a></li>
+                <li><a href="#n">CAFE</a></li>
+                <li><a href="#n">CUPBOARD</a></li>
+                <li><a href="#n">GOURMET</a></li>
+                <li><a href="#n">LIFE</a></li>
+                <li><a href="#n">ARCHIVE</a></li>
+            </ul>
+        </nav>
+        <div class="util">
+            <button type="button" class="search_button"></button>
+        </div>
+    </header>
+
+    <!-- 메인 섹션 영역 -->
+
+    <section id="main_slide_wrap">
+        <div class="swiper mySwiper main_slide_frame">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide main_slide_prev">
+                <a href="#n">
+                    <strong>-</strong>
+                    <span class="more">
+                        VIEW MORE
+                        <span class="arrow"></span>
+                    </span>
+                </a>
+              </div>
+              <div class="swiper-slide main_slide_next">
+                <a href="#n">
+                    <strong>-</strong>
+                    <span class="more">
+                        VIEW MORE
+                        <span class="arrow"></span>
+                    </span>
+                </a>
+              </div>
+            </div>
+        </div>
+        <button class="swiper-button-next"></button>
+        <button class="swiper-button-prev"></button>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- 피코크 베스트 메뉴 -->
+
+    <section id="peacock_best"></section>
+
+</body>
+<script src="./js/index.js"></script>
+</html>
